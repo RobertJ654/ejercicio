@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Ejercicio 11 </title>
+        <h1> Ejercico 11 de clase </h1>
+        <h2>The are length of a segment of a parabola ABC of an ellipse width semi-minor axes a and b is given approximately by: <br> 
+        <img src="img/img01.jpg">
+        <img src="img/img02.jpg">
+        <br>
+        Determine L(ABC) if a=11 in. and b=9 in</h2>
+        <br><br>
+        <input type="text" placeholder="write a numer a = 11" id="Num1"><br>
+        <input type="text" placeholder="write a numer b = 9" id="Num2"><br>
+        <input type="button" name="name" value="Enviar" onclick="Pluss();">
+    </head>
+    <body>
+        <script type="text/javascript">
+        function Pluss()
+        {
+            var a = parseFloat(document.getElementById('Num1').value);
+            var b = parseFloat(document.getElementById('Num2').value);
+            var a1 = 16 * Math.pow(a, 2)
+            var a2 = Math.sqrt(Math.pow(b, 2) + a1)
+            var af = 1/2 * a2
+            var bf = (Math.pow(b, 2) / (8*a)) * Math.log(((4*a)+Math.sqrt(Math.pow(b, 2)+(16*Math.pow(a, 2))))/b)      // ¡ ESTA PARTE ESTÁ BIEN !
+            var Result;
+            Result = af + bf;
+            alert("The result of the operation is:"+Result); 
+        }
+        </script>
+        <br>
+        <h2>The result according to the calculator should be: 24.56373...</h2>
+    </body>
+</html>
